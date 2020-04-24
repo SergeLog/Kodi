@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="context.serviciada.contextmenu" name="Serviciada - Contextmenu" version="1.0.0" provider-name="SerDJ">
+	<requires>
+		<import addon="xbmc.python" version="2.24.0"/>
+	</requires>
+	<!--extension point="kodi.context.item" library="addon.py">		
+		<item>
+			<label>Download</label>
+			<visible>StringCompare(ListItem.dbtype,movie) | StringCompare(ListItem.dbtype,tvshow) | StringCompare(ListItem.dbtype,season) | StringCompare(ListItem.dbtype,episode)</visible>
+		</item>
+	</extension-->
+	<extension point="kodi.context.item">
+		<menu id="kodi.core.main">
+			<item library="addon.py">
+				<label>Download</label>
+				<visible>StringCompare(ListItem.dbtype,movie) | StringCompare(ListItem.dbtype,tvshow) | StringCompare(ListItem.dbtype,season) | StringCompare(ListItem.dbtype,episode)</visible>
+			</item>
+		</menu>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Download the selected movia via Serviciada server</summary>
+		<description lang="en">Add Serviciada contextmenu button to context menu in library. This contextmenu will add "Download button"".</description>
+		<platform>all</platform>
+		<forum/>
+	</extension>
+</addon>
